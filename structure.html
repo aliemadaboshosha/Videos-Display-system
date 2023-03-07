@@ -1,0 +1,44 @@
+<html>
+	<head>
+		
+		<link rel="stylesheet" href="style.css" />
+		<script src="main.js"></script>
+		<title>Video Player</title>
+	</head>
+	<body>
+		<section id="mainwrapper">
+			<section id="controlswrapper"></section>
+			<section id="videowrapper">
+				<video src="1.mp4" id="myvideo"  autoplay></video>
+			
+			</section >
+			<section class="control">
+				<details>
+					<summary>volume</summary>
+				<input type="range" min="0" max="1" step="0.1" value="0.5" onchange="changevolume(event);"/>
+				
+				<input type="checkbox" onchange="mutefun();"/>Mute
+			</details>
+				<br/>
+				
+				<details>
+					<summary>size</summary>
+					<select onchange="changevideosize(this)">
+						<option>Select Video Size</option>
+						<option value="small">Small</option>
+						<option value="medium">Medium</option>
+						<option value="large">Large</option>
+						<option value="fullScreen">FullScreen</option>
+					
+					</select>
+					
+					</details>
+					<summary>play|pause</summary>
+					<input type="button" id="playpausebtn" value="play" onclick="playpausefun();">
+						
+
+				</section>
+			
+		</section>
+	</body>
+</html>
